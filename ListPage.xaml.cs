@@ -36,7 +36,7 @@ public partial class ListPage : ContentPage
         base.OnAppearing();
         var items = await App.Database.GetShopsAsync();
         ShopPicker.ItemsSource = (System.Collections.IList)items;
-        ShopPicker.ItemDisplayBinding = new Binding("ShopDetails");
+        ShopPicker.ItemDisplayBinding = new Binding("ShopName");
 
         var shopl = (ShopList)BindingContext;
 
